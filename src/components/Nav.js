@@ -25,7 +25,6 @@ export const Nav = () => {
   const location = useLocation();
 
   const activeView = listLinks.find(item => item.path === location.pathname) || listLinks[0];
-  console.log(activeView)
 
   return (
     <AppBar position="static">
