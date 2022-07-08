@@ -17,14 +17,15 @@ const listLinks = [
   {
     path: "/movies/favorites",
     name: "Favorite movies",
-  }
-]
+  },
+];
 
 export const Nav = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const activeView = listLinks.find(item => item.path === location.pathname) || listLinks[0];
+  const activeView =
+    listLinks.find((item) => item.path === location.pathname) || listLinks[0];
 
   return (
     <AppBar position="static">
@@ -34,7 +35,7 @@ export const Nav = () => {
             display: "flex",
             flex: "1",
             alignItems: "center",
-            justifyContent: "space-between"
+            justifyContent: "space-between",
           }}
         >
           <Typography variant="h6" color="inherit" component="div">
@@ -44,15 +45,16 @@ export const Nav = () => {
             <ListItem disablePadding>
               {listLinks.map((link) => {
                 return (
-                  <ListItemButton 
+                  <ListItemButton
                     key={link.path}
-                    sx={{ textAlign: "center" }} 
+                    sx={{ textAlign: "center" }}
                     onClick={() => {
-                      navigate(link.path)
-                    }}>
+                      navigate(link.path);
+                    }}
+                  >
                     <ListItemText primary={link.name} />
                   </ListItemButton>
-                )
+                );
               })}
             </ListItem>
           </List>

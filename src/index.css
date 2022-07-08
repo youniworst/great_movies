@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.movie_card_img {
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+
+.movie_card_img:hover {
+  transform: scale(1.05, 1.05);
+  cursor: pointer;
+}
